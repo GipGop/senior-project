@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>AstroCalc</title>
+  <link rel="icon" type="image/x-icon" href="images/jupiter.png">
+  <link href="styles/orbits.css" rel="stylesheet" type="text/css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <span id="jupiter"></span>
+  <div id="sliders">
+    <input type="range" min="-100" max="100" value="-80" class="slider" id="slider1">
+    <input type="range" min="-100" max="100" value="-50" class="slider" id="slider2">
+    <input type="range" min="-100" max="100" value="50" class="slider" id="slider3">
+    <input type="range" min="-100" max="100" value="80" class="slider" id="slider4">
+    <input id="dateTimeInput" type="datetime-local">
+  </div>
+  <div id="moonSelectors">
+    <button class="moonSelector" id="moonSelector1" onclick="selectMoon('1')">Moon 1</button>
+    <button class="moonSelector" id="moonSelector2" onclick="selectMoon('2')">Moon 2</button>
+    <button class="moonSelector" id="moonSelector3" onclick="selectMoon('3')">Moon 3</button>
+    <button class="moonSelector" id="moonSelector4" onclick="selectMoon('4')">Moon 4</button>
+  </div>
+  <div id="ui">
+    <button id="saveFrame" onclick="saveFrame()">Save Frame</button>
+    <br>
+    <button id="calculate" onclick="calculate()">Calculate</button>
+    <br>
+    <h2 id="hoursAhead">Hours Ahead</h2><input id="timeAhead" type="number">
+    <br>
+    <button id="reset" onclick="reset()">Reset</button>
+  </div>
+  <div id="framesList">
+    <h2 id="framesText">Frames</h2>
+  </div>
+  <script src="scripts/orbits.js"></script>
+</body>
+
+</html>
